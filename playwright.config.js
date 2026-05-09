@@ -37,7 +37,7 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['html', {
-      title: 'Test Report',
+      title: 'Playwright Demo | Test Report',
       open: 'always'
     }],
     ['list'],
@@ -61,7 +61,8 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        viewport: { width: 1920, height: 1080 }
+        viewport: { width: 1920, height: 1080 },
+        screenshot:'on'
       },
     },
 
