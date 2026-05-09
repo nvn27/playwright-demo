@@ -16,6 +16,8 @@ test('has title', async ({ page }) => {
     const text = await page.locator("//input[@role='button']").last().getAttribute('value');
     console.log(`Extracted text: ${text}`);
 
+    // expect(text).toBe('ABC');
+
 });
 
 // test('get started link', async ({ page }) => {
