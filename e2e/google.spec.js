@@ -22,6 +22,7 @@ test('has title', async ({ page }) => {
 
     await page.waitForTimeout(2000);
 
+    // Failure Step
     // expect(text).toBe('ABC');
 });
 
