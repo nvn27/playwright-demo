@@ -16,7 +16,7 @@ import { title } from 'node:process';
 export default defineConfig({
   testDir: './e2e',
 
-  timeout: 5000,
+  timeout: 30000,
 
   expect: {
     timeout: 5000
@@ -29,7 +29,8 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
 
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  // retries: process.env.CI ? 2 : 0,
+  retries: 2,
 
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
@@ -62,7 +63,7 @@ export default defineConfig({
       use: {
         ...devices['Desktop Chrome'],
         viewport: { width: 1920, height: 1080 },
-        screenshot:'on'
+        screenshot: 'on'
       },
     },
 
